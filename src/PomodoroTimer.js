@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Container, Row, Col, ProgressBar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlay,
-  faPause,
-  faRedo,
-  faPlayCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faPause, faRedo } from "@fortawesome/free-solid-svg-icons";
 import useSound from "use-sound";
 import alarmSound from "./nokia.mp3";
 
@@ -104,16 +99,16 @@ const PomodoroTimer = () => {
               </Button>
             ) : isPaused ? (
               <Button
-                variant="info"
+                variant="success"
                 size="lg"
                 onClick={handleResume}
                 className="me-4"
               >
-                <FontAwesomeIcon icon={faPlayCircle} /> Resume
+                <FontAwesomeIcon icon={faPlay} /> Resume
               </Button>
             ) : (
               <Button
-                variant="danger"
+                variant="warning"
                 size="lg"
                 onClick={handlePause}
                 className="me-4"
@@ -121,7 +116,7 @@ const PomodoroTimer = () => {
                 <FontAwesomeIcon icon={faPause} /> Pause
               </Button>
             )}
-            <Button variant="secondary" size="lg" onClick={handleReset}>
+            <Button variant="danger" size="lg" onClick={handleReset}>
               <FontAwesomeIcon icon={faRedo} /> Reset
             </Button>
           </div>
