@@ -78,10 +78,10 @@ const PomodoroTimer = () => {
       <Row>
         <Col>
           <h1>{isBreak ? "Break" : "Focus"} Time</h1>
-          <h2>
+          <pre className="display-1">
             {minutes < 10 ? `0${minutes}` : minutes}:
             {seconds < 10 ? `0${seconds}` : seconds}
-          </h2>
+          </pre>
           <ProgressBar
             animated
             now={
